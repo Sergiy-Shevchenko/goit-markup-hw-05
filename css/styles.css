@@ -97,7 +97,10 @@ font-weight: 700;*/
   color: var(--text-color);
   padding-top: 32px;
   padding-bottom: 32px;
-  /*outline: 2px solid blue*/
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*---список-хедера---*/
@@ -140,6 +143,10 @@ font-weight: 700;*/
   color: var(--text-title-color);
   padding-top: 32px;
   padding-bottom: 32px;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*---колiр-центрування-вiдступи-картинок-пошти-телефона---*/
@@ -147,6 +154,10 @@ font-weight: 700;*/
   align-items: center;
   margin-right: 10px;
   fill: var(--text-title-color);
+
+  transition-property: fill;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .text-web-header,
@@ -377,14 +388,18 @@ font-weight: 400;*/
   display: flex;
   width: 100%;
   height: 100%;
-  /*background-color: #2196f3;*/
   border-radius: 50%;
   align-items: center;
   justify-content: center;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  /*transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);*/
 }
 
 .team-soc-icon {
   fill: #afb1b8;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .fone {
@@ -407,6 +422,8 @@ font-weight: 400;*/
 
 .clients-title-icon {
   padding: 16px 32px;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .clients-title {
@@ -418,10 +435,15 @@ font-weight: 400;*/
 
   justify-content: center;
   align-items: center;
+
+  transition: border 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .client-icon {
   fill: #afb1b8;
+
+  transition: fill 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*Порефолiо*/
@@ -454,6 +476,9 @@ font-weight: 400;*/
   letter-spacing: 0.03em;
   cursor: pointer;
   display: inline-block;
+
+  transition: color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .button-order {
@@ -471,6 +496,10 @@ font-weight: 400;*/
   /*border-radius: 4px;*/
   padding: 10px 32px;
   margin-top: 30px;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: box-shadow 250ms cubic-bezier(0.4, 0, 0.2, 1);
+  transition: border-radius 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 /*Колiр*/
@@ -565,7 +594,7 @@ font-weight: 400;*/
   padding: 20px 24px;
 }
 
-/*Футер*/
+/*--------------------ФУТЕР-----------------*/
 
 footer {
   background-color: var(--footer-background-color);
@@ -601,6 +630,10 @@ footer .container {
   letter-spacing: 0.03em;
   color: var(--background-color);
   text-decoration: none;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .connect {
@@ -613,6 +646,10 @@ footer .container {
   color: rgba(255, 255, 255, 0.6);
   text-decoration: none;
   padding-top: 9px;
+
+  transition-property: color;
+  transition-duration: 250ms;
+  transition-timing-function: cubic-bezier(0.4, 0, 0.2, 1);
 }
 
 .foot-soc {
@@ -648,6 +685,8 @@ footer .container {
   border-radius: 50%;
   align-items: center;
   justify-content: center;
+
+  transition: background-color 250ms cubic-bezier(0.4, 0, 0.2, 1);
 }
 .footer-soc-icon {
   fill: var(--background-color);
@@ -656,7 +695,7 @@ footer .container {
 /*-----------------Модальне вiкнo-----------*/
 /*-----------------------Фон----------------*/
 
-/*---Позицiонування фону---*/
+/*---Позицiонування-фону---*/
 .backdrop {
   position: fixed;
   top: 0;
@@ -665,12 +704,12 @@ footer .container {
   height: 100%;
   background-color: rgba(0, 0, 0, 0.2);
 }
-/*------Прозорiсть фону-----*/
+/*------Прозорiсть-фону-----*/
 .backdrop.is-hidden {
   opacity: 0;
   pointer-events: none;
 }
-/*-------------------Модальне вiкно----------*/
+/*-------------------Модальне-вiкно----------*/
 .modal {
   position: absolute;
   top: 50%;
@@ -683,19 +722,25 @@ footer .container {
     0px 2px 1px rgba(0, 0, 0, 0.2);
   border-radius: 4px;
 }
-/*------------------Кнопка "Закрити"-----------*/
+/*------------------Кнопка-"Закрити"-----------*/
 .closed {
   position: absolute;
   top: 0;
   right: 0;
+  width: 30px;
+  height: 30px;
   background: #ffffff;
-  fill: #2f303a;
+  margin-top: 8px;
+  margin-right: 8px;
+  /*fill: #2f303a;*/
   box-shadow: 0px 1px 3px rgba(0, 0, 0, 0.12), 0px 1px 1px rgba(0, 0, 0, 0.14),
     0px 2px 1px rgba(0, 0, 0, 0.2);
   /*border-radius: 4px;*/
 }
 
-/*Hover*/
+/*--------------hover/focus------------*/
+
+/*---ХЕДЕР-/навыгацыя-контакти/---Футер-/адреса-контакти/---*/
 
 .header-link:hover,
 .connect-link:hover,
@@ -704,49 +749,104 @@ footer .container {
   color: var(--text-active-color);
 }
 
+.header-link:focus,
+.connect-link:focus,
+.connect:focus,
+.address:focus {
+  color: var(--text-active-color);
+}
+/*---ХЕДЕР-iконки-контактiв*/
+
 .connect-link:hover .contact-icon {
   fill: var(--text-active-color);
 }
 
+.connect-link:focus .contact-icon {
+  fill: var(--text-active-color);
+}
+/*---соцiальнi-мережi-команди---*/
+/*---фон---*/
 .team-soc-link-icon:hover,
 .foot-soc-icon:hover {
   background-color: var(--text-active-color);
 }
 
+.team-soc-link-icon:focus,
+.foot-soc-icon:focus {
+  background-color: var(--text-active-color);
+}
+
+/*---колiр--*/
 .team-soc-link-icon:hover .team-soc-icon,
 .foot-soc-icon:hover .team-soc-icon {
   fill: var(--background-color);
 }
 
+.team-soc-link-icon:focus .team-soc-icon,
+.foot-soc-icon:focus .team-soc-icon {
+  fill: var(--background-color);
+}
+/*---нашi-клiэнти---*/
+/*---колiр-рамки---*/
 .clients-title:hover {
   border: 1px solid #2196f3;
 }
 
+.clients-title:focus .clients-title-icon {
+  border: 1px solid #2196f3;
+}
+
+/*---колiр-iконки---*/
 .clients-title:hover .client-icon {
   fill: var(--text-active-color);
 }
 
+.clients-title:focus,
+.clients-title-icon:focus .client-icon {
+  fill: var(--text-active-color);
+}
+
+/*---активна-вкладка---*/
 .header-link-current:hover {
   color: var(--text-color);
 }
 
+.header-link-current:focus {
+  color: var(--text-color);
+}
+
+/*---КНОПКИ---*/
+/*---кнопки---*/
 .button:hover {
   color: var(--background-color);
   background-color: var(--text-active-color);
 }
 
+.button:focus {
+  color: var(--background-color);
+  background-color: var(--text-active-color);
+}
+
+/*---кнопка-ЗАМОВИТИ-ПОСЛУГУ---*/
 .button-order:hover {
-  background: #2196f3;
+  background-color: #2196f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
 
 .button-order:focus {
-  background: #2196f3;
+  background-color: #2196f3;
   box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
   border-radius: 4px;
 }
 
+.button-order:active {
+  background-color: #188ce8;
+  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
+  border-radius: 4px;
+}
+
+/*--------ПОРТФОЛIO-------*/
 .link-img-portfol:hover .img,
 .link-img-portfol:hover .link-img {
   background: #ffffff;
@@ -761,60 +861,4 @@ footer .container {
   border: 1px solid #eeeeee;
   box-shadow: 0px 1px 1px rgba(0, 0, 0, 0.12), 0px 4px 4px rgba(0, 0, 0, 0.06),
     1px 4px 6px rgba(0, 0, 0, 0.16);
-}
-
-/*Focus*/
-
-.header-link:focus,
-.connect-link:focus,
-.connect:focus {
-  color: var(--text-active-color);
-}
-
-.connect-link:focus .contact-icon {
-  fill: var(--text-active-color);
-}
-
-.team-soc-link-icon:focus,
-.foot-soc-icon:focus {
-  background-color: var(--text-active-color);
-}
-
-.team-soc-link-icon:focus .team-soc-icon,
-.foot-soc-icon:focus .team-soc-icon {
-  fill: var(--background-color);
-}
-
-.clients-title:focus,
-.clients-title-icon:focus .client-icon {
-  fill: var(--text-active-color);
-}
-.clients-title:focus .clients-title-icon {
-  border: 1px solid #2196f3;
-}
-
-.team-soc-link-icon:focus {
-  background-color: var(--text-active-color);
-}
-
-.header-link-current:focus {
-  color: var(--text-color);
-}
-
-.button:focus {
-  color: var(--background-color);
-  background-color: var(--text-active-color);
-}
-
-/*Active*/
-
-.header-link:active,
-.button:active {
-  color: var(--text-color);
-}
-
-.button-order:active {
-  background: #188ce8;
-  box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
-  border-radius: 4px;
 }
